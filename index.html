@@ -20,8 +20,7 @@
             background: #4b0082;
             color: white;
             text-align: center;
-            padding: 1.5rem;
-            position: relative;
+            padding: 1rem;
         }
 
         header {
@@ -29,6 +28,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 1rem 2rem;
+            flex-wrap: wrap;
         }
 
         .passport-photo {
@@ -36,11 +36,7 @@
             height: 120px;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .passport-photo:hover {
-            transform: scale(1.1);
+            animation: fadeIn 1s ease;
         }
 
         header h1 {
@@ -54,6 +50,8 @@
         .cta-buttons {
             display: flex;
             gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .cta-buttons a {
@@ -78,10 +76,6 @@
             padding: 1rem;
             background: white;
             border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            animation: fadeIn 1s ease;
         }
 
         section {
@@ -93,6 +87,7 @@
             gap: 1rem;
             align-items: center;
             transition: box-shadow 0.3s ease;
+            animation: fadeIn 1s ease;
         }
 
         section:hover {
@@ -119,67 +114,60 @@
 
         footer {
             text-align: center;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .passport-photo {
+                margin-bottom: 1rem;
+            }
+
+            section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .illustration img {
+                margin-bottom: 1rem;
+            }
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
         }
 
         @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
         }
     </style>
 </head>
 <body>
     <header>
         <img class="passport-photo" src="https://i.ibb.co/G79mNQj/My-Image.jpg" alt="Passport Photo">
-        <h1>Jayesh Kamlakar Mahajan</h1>
+        <h1>Jayesh Mahajan</h1>
         <div class="cta-buttons">
             <a href="mailto:mahajanjayesh313@gmail.com">Email Me</a>
             <a href="tel:+919284664423">Contact Me</a>
